@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Prayers TimesVC-->
+        <scene sceneID="Q39-YB-xyJ">
+            <objects>
+                <viewController storyboardIdentifier="PrayersTimesVC" id="yuD-I7-YNw" customClass="PrayersTimesVC" customModule="SalwatTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HFh-w8-Xyi" customClass="PrayersTimesView" customModule="SalwatTimes" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omj-py-HLX" userLabel="BGView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yed-MR-uAw">
+                                <rect key="frame" x="10" y="44" width="41.5" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="6gW-jI-M8s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgF-Gg-n49" userLabel="next month">
+                                <rect key="frame" x="374" y="56.5" width="30" height="30"/>
+                                <connections>
+                                    <action selector="nextMonthPressed:" destination="yuD-I7-YNw" eventType="touchUpInside" id="qZH-s3-6e2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZC-nW-Qwg" userLabel="previous month">
+                                <rect key="frame" x="334" y="56.5" width="30" height="30"/>
+                                <connections>
+                                    <action selector="previousMonthPressed:" destination="yuD-I7-YNw" eventType="touchUpInside" id="Eok-Ht-1y2"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wy3-9t-W0Z">
+                                <rect key="frame" x="0.0" y="109" width="414" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="NGJ-4C-jm7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cJb-ep-ARu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d35-eY-Av6">
+                                <rect key="frame" x="0.0" y="184" width="414" height="712"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RS-aV-gTo" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="712"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LdP-yM-P5n">
+                                                <rect key="frame" x="15" y="45" width="384" height="325"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7p-Jf-gds" customClass="PrayerView" customModule="SalwatTimes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="65"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="b38-Sg-vmH"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-aS-kVI" customClass="PrayerView" customModule="SalwatTimes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="65" width="384" height="65"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYo-Kz-xUo" customClass="PrayerView" customModule="SalwatTimes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="130" width="384" height="65"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eU-1F-IdE" customClass="PrayerView" customModule="SalwatTimes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="195" width="384" height="65"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96x-ot-RI7" customClass="PrayerView" customModule="SalwatTimes" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="260" width="384" height="65"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="LdP-yM-P5n" secondAttribute="trailing" constant="15" id="68Q-hI-tZz"/>
+                                            <constraint firstItem="LdP-yM-P5n" firstAttribute="leading" secondItem="6RS-aV-gTo" secondAttribute="leading" constant="15" id="6Tj-N1-4Du"/>
+                                            <constraint firstItem="LdP-yM-P5n" firstAttribute="top" secondItem="6RS-aV-gTo" secondAttribute="top" constant="45" id="LBE-pY-HHE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6RS-aV-gTo" firstAttribute="top" secondItem="Z23-Ju-kFb" secondAttribute="top" id="6I0-tv-u2z"/>
+                                    <constraint firstItem="6RS-aV-gTo" firstAttribute="width" secondItem="d35-eY-Av6" secondAttribute="width" id="BrX-RH-fHN"/>
+                                    <constraint firstItem="6RS-aV-gTo" firstAttribute="leading" secondItem="d35-eY-Av6" secondAttribute="leading" id="GZH-kx-Qkh"/>
+                                    <constraint firstAttribute="trailing" secondItem="6RS-aV-gTo" secondAttribute="trailing" id="OyU-29-C1u"/>
+                                    <constraint firstAttribute="bottom" secondItem="6RS-aV-gTo" secondAttribute="bottom" id="VKZ-48-ZuK"/>
+                                    <constraint firstItem="6RS-aV-gTo" firstAttribute="height" secondItem="d35-eY-Av6" secondAttribute="height" priority="250" id="q4g-zx-BZj"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="3jS-OQ-WlW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Z23-Ju-kFb"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GJh-t4-WCT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="omj-py-HLX" secondAttribute="trailing" id="FlC-DQ-cth"/>
+                            <constraint firstItem="d35-eY-Av6" firstAttribute="leading" secondItem="GJh-t4-WCT" secondAttribute="leading" id="Nqa-cn-E08"/>
+                            <constraint firstItem="Wy3-9t-W0Z" firstAttribute="top" secondItem="Yed-MR-uAw" secondAttribute="bottom" constant="10" id="Oef-Lh-pNA"/>
+                            <constraint firstItem="Yed-MR-uAw" firstAttribute="top" secondItem="GJh-t4-WCT" secondAttribute="top" id="U5a-Fn-A3k"/>
+                            <constraint firstItem="VZC-nW-Qwg" firstAttribute="centerY" secondItem="Yed-MR-uAw" secondAttribute="centerY" id="VDV-89-bVc"/>
+                            <constraint firstItem="omj-py-HLX" firstAttribute="leading" secondItem="GJh-t4-WCT" secondAttribute="leading" id="WAq-aY-bwS"/>
+                            <constraint firstAttribute="bottom" secondItem="d35-eY-Av6" secondAttribute="bottom" id="c1Y-Sg-rJk"/>
+                            <constraint firstItem="Wy3-9t-W0Z" firstAttribute="leading" secondItem="GJh-t4-WCT" secondAttribute="leading" id="gYP-CB-lLa"/>
+                            <constraint firstItem="GJh-t4-WCT" firstAttribute="trailing" secondItem="QgF-Gg-n49" secondAttribute="trailing" constant="10" id="ksK-cA-lRn"/>
+                            <constraint firstItem="GJh-t4-WCT" firstAttribute="trailing" secondItem="Wy3-9t-W0Z" secondAttribute="trailing" id="lBR-rZ-XN5"/>
+                            <constraint firstItem="d35-eY-Av6" firstAttribute="top" secondItem="Wy3-9t-W0Z" secondAttribute="bottom" id="ltI-KB-T1i"/>
+                            <constraint firstItem="QgF-Gg-n49" firstAttribute="centerY" secondItem="Yed-MR-uAw" secondAttribute="centerY" id="nct-Wc-6Qv"/>
+                            <constraint firstItem="QgF-Gg-n49" firstAttribute="leading" secondItem="VZC-nW-Qwg" secondAttribute="trailing" constant="10" id="oV9-4W-dNy"/>
+                            <constraint firstItem="omj-py-HLX" firstAttribute="top" secondItem="HFh-w8-Xyi" secondAttribute="top" id="sDM-KK-Ff8"/>
+                            <constraint firstItem="omj-py-HLX" firstAttribute="bottom" secondItem="d35-eY-Av6" secondAttribute="top" constant="30" id="tjn-Q5-g8W"/>
+                            <constraint firstItem="GJh-t4-WCT" firstAttribute="trailing" secondItem="d35-eY-Av6" secondAttribute="trailing" id="tvR-bp-xjG"/>
+                            <constraint firstItem="Yed-MR-uAw" firstAttribute="leading" secondItem="GJh-t4-WCT" secondAttribute="leading" constant="10" id="vH4-OY-HUQ"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="bgView" destination="omj-py-HLX" id="eF8-68-FhP"/>
+                            <outlet property="dateLabel" destination="Yed-MR-uAw" id="2Bs-3u-r2G"/>
+                            <outlet property="dayPrayersTimes" destination="LdP-yM-P5n" id="s24-rF-etG"/>
+                            <outlet property="monthDaysCollectionView" destination="Wy3-9t-W0Z" id="WxO-sC-ca3"/>
+                            <outlet property="nextMonth" destination="VZC-nW-Qwg" id="4ko-8H-bNC"/>
+                            <outlet property="previousMonth" destination="QgF-Gg-n49" id="gFo-FC-mUt"/>
+                            <outlet property="scrollView" destination="d35-eY-Av6" id="yea-Lb-dCZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="prayersTimesView" destination="HFh-w8-Xyi" id="JFX-yu-n0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ta5-mN-BcJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211.59420289855075" y="-53.571428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

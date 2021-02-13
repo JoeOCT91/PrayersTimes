@@ -3,27 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C976B50E603E69D1FC8134A /* Pods_SalwatTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D44A0C638004158E7225484 /* Pods_SalwatTimes.framework */; };
+		861C229125D5F77C001D019C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C229025D5F77C001D019C /* UserDefaultsManager.swift */; };
+		861C229525D5F7C8001D019C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C229425D5F7C8001D019C /* Constants.swift */; };
+		861C22A225D60358001D019C /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22A125D60358001D019C /* DayCell.swift */; };
+		861C22A825D60403001D019C /* PrayersTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22A725D60403001D019C /* PrayersTimeView.swift */; };
+		861C22AE25D606D9001D019C /* PrayersTimesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22AD25D606D9001D019C /* PrayersTimesVM.swift */; };
+		861C22B225D6080B001D019C /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22B125D6080B001D019C /* UIViewController+Storyboard.swift */; };
+		861C22B725D60857001D019C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22B625D60857001D019C /* APIManager.swift */; };
+		861C22BB25D60AF5001D019C /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22BA25D60AF5001D019C /* APIRouter.swift */; };
+		861C22BF25D60E1D001D019C /* MainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22BE25D60E1D001D019C /* MainResponse.swift */; };
+		861C22C325D60E64001D019C /* Timings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22C225D60E64001D019C /* Timings.swift */; };
+		861C22C925D6164E001D019C /* prayersTimes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861C22C825D6164E001D019C /* prayersTimes.storyboard */; };
+		861C22CF25D625FB001D019C /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22CE25D625FB001D019C /* UIView+Loader.swift */; };
 		86C1D03125D55FBF000A59C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D03025D55FBF000A59C7 /* AppDelegate.swift */; };
-		86C1D03325D55FBF000A59C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D03225D55FBF000A59C7 /* SceneDelegate.swift */; };
-		86C1D03525D55FBF000A59C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D03425D55FBF000A59C7 /* ViewController.swift */; };
+		86C1D03525D55FBF000A59C7 /* PrayersTimesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D03425D55FBF000A59C7 /* PrayersTimesVC.swift */; };
 		86C1D03825D55FBF000A59C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C1D03625D55FBF000A59C7 /* Main.storyboard */; };
 		86C1D03A25D55FC0000A59C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C1D03925D55FC0000A59C7 /* Assets.xcassets */; };
 		86C1D03D25D55FC0000A59C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C1D03B25D55FC0000A59C7 /* LaunchScreen.storyboard */; };
+		86C1D04625D55FE9000A59C7 /* PrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D04525D55FE9000A59C7 /* PrayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		388EF3E8E8EA475B8736DB32 /* Pods-SalwatTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalwatTimes.release.xcconfig"; path = "Target Support Files/Pods-SalwatTimes/Pods-SalwatTimes.release.xcconfig"; sourceTree = "<group>"; };
+		6D44A0C638004158E7225484 /* Pods_SalwatTimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SalwatTimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		861C229025D5F77C001D019C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		861C229425D5F7C8001D019C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		861C22A125D60358001D019C /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		861C22A725D60403001D019C /* PrayersTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersTimeView.swift; sourceTree = "<group>"; };
+		861C22AD25D606D9001D019C /* PrayersTimesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersTimesVM.swift; sourceTree = "<group>"; };
+		861C22B125D6080B001D019C /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		861C22B625D60857001D019C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		861C22BA25D60AF5001D019C /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		861C22BE25D60E1D001D019C /* MainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResponse.swift; sourceTree = "<group>"; };
+		861C22C225D60E64001D019C /* Timings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timings.swift; sourceTree = "<group>"; };
+		861C22C825D6164E001D019C /* prayersTimes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prayersTimes.storyboard; sourceTree = "<group>"; };
+		861C22CE25D625FB001D019C /* UIView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
 		86C1D02D25D55FBF000A59C7 /* SalwatTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalwatTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C1D03025D55FBF000A59C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86C1D03225D55FBF000A59C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86C1D03425D55FBF000A59C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86C1D03425D55FBF000A59C7 /* PrayersTimesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersTimesVC.swift; sourceTree = "<group>"; };
 		86C1D03725D55FBF000A59C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86C1D03925D55FC0000A59C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86C1D03C25D55FC0000A59C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86C1D03E25D55FC0000A59C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C1D04525D55FE9000A59C7 /* PrayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerView.swift; sourceTree = "<group>"; };
+		F6A64E1D1A599D6B72AE3EC2 /* Pods-SalwatTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalwatTimes.debug.xcconfig"; path = "Target Support Files/Pods-SalwatTimes/Pods-SalwatTimes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,149 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C976B50E603E69D1FC8134A /* Pods_SalwatTimes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861C228F25D5F75C001D019C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				861C229025D5F77C001D019C /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		861C229325D5F7AA001D019C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				861C229425D5F7C8001D019C /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		861C229825D6006F001D019C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				86C1D03025D55FBF000A59C7 /* AppDelegate.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		861C229925D600BA001D019C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				861C22B625D60857001D019C /* APIManager.swift */,
+				861C22BA25D60AF5001D019C /* APIRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		861C22A025D60301001D019C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8624BDD325D77EF500049F29 /* CustomViews */,
+				861C22A625D603DB001D019C /* PrayersTimes */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		861C22A625D603DB001D019C /* PrayersTimes */ = {
+			isa = PBXGroup;
+			children = (
+				86C1D03425D55FBF000A59C7 /* PrayersTimesVC.swift */,
+				861C22A725D60403001D019C /* PrayersTimeView.swift */,
+			);
+			path = PrayersTimes;
+			sourceTree = "<group>";
+		};
+		861C22AC25D606B1001D019C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				861C22AD25D606D9001D019C /* PrayersTimesVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		861C22B525D6083F001D019C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8624BDD125D77E2900049F29 /* UIViewController */,
+				861C22CD25D625EC001D019C /* UIView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		861C22BD25D60E0A001D019C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				861C22BE25D60E1D001D019C /* MainResponse.swift */,
+				861C22C225D60E64001D019C /* Timings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		861C22C625D615EE001D019C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8624BDD425D77F0800049F29 /* Assets */,
+				861C22C725D61604001D019C /* Storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		861C22C725D61604001D019C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				861C22C825D6164E001D019C /* prayersTimes.storyboard */,
+				86C1D03625D55FBF000A59C7 /* Main.storyboard */,
+				86C1D03B25D55FC0000A59C7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		861C22CD25D625EC001D019C /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				861C22CE25D625FB001D019C /* UIView+Loader.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		8624BDD125D77E2900049F29 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				861C22B125D6080B001D019C /* UIViewController+Storyboard.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		8624BDD325D77EF500049F29 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				86C1D04525D55FE9000A59C7 /* PrayerView.swift */,
+				861C22A125D60358001D019C /* DayCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8624BDD425D77F0800049F29 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				86C1D03925D55FC0000A59C7 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		86C1D02425D55FBF000A59C7 = {
 			isa = PBXGroup;
 			children = (
 				86C1D02F25D55FBF000A59C7 /* SalwatTimes */,
 				86C1D02E25D55FBF000A59C7 /* Products */,
+				9E6E0DE662469797B1831625 /* Pods */,
+				B29D0871CB365CF27F8D84CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +216,35 @@
 		86C1D02F25D55FBF000A59C7 /* SalwatTimes */ = {
 			isa = PBXGroup;
 			children = (
-				86C1D03025D55FBF000A59C7 /* AppDelegate.swift */,
-				86C1D03225D55FBF000A59C7 /* SceneDelegate.swift */,
-				86C1D03425D55FBF000A59C7 /* ViewController.swift */,
-				86C1D03625D55FBF000A59C7 /* Main.storyboard */,
-				86C1D03925D55FC0000A59C7 /* Assets.xcassets */,
-				86C1D03B25D55FC0000A59C7 /* LaunchScreen.storyboard */,
+				861C229825D6006F001D019C /* Shared */,
+				861C229925D600BA001D019C /* Networking */,
+				861C228F25D5F75C001D019C /* Managers */,
+				861C229325D5F7AA001D019C /* Utilities */,
+				861C22B525D6083F001D019C /* Extensions */,
+				861C22BD25D60E0A001D019C /* Model */,
+				861C22AC25D606B1001D019C /* ViewModels */,
+				861C22A025D60301001D019C /* Views */,
+				861C22C625D615EE001D019C /* Resources */,
 				86C1D03E25D55FC0000A59C7 /* Info.plist */,
 			);
 			path = SalwatTimes;
+			sourceTree = "<group>";
+		};
+		9E6E0DE662469797B1831625 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6A64E1D1A599D6B72AE3EC2 /* Pods-SalwatTimes.debug.xcconfig */,
+				388EF3E8E8EA475B8736DB32 /* Pods-SalwatTimes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B29D0871CB365CF27F8D84CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D44A0C638004158E7225484 /* Pods_SalwatTimes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86C1D04125D55FC0000A59C7 /* Build configuration list for PBXNativeTarget "SalwatTimes" */;
 			buildPhases = (
+				ED4D4CE085D10C9E044A12D7 /* [CP] Check Pods Manifest.lock */,
 				86C1D02925D55FBF000A59C7 /* Sources */,
 				86C1D02A25D55FBF000A59C7 /* Frameworks */,
 				86C1D02B25D55FBF000A59C7 /* Resources */,
+				AB3195C063059798EE2B69EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,20 +308,74 @@
 			files = (
 				86C1D03D25D55FC0000A59C7 /* LaunchScreen.storyboard in Resources */,
 				86C1D03A25D55FC0000A59C7 /* Assets.xcassets in Resources */,
+				861C22C925D6164E001D019C /* prayersTimes.storyboard in Resources */,
 				86C1D03825D55FBF000A59C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB3195C063059798EE2B69EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SalwatTimes/Pods-SalwatTimes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SalwatTimes/Pods-SalwatTimes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SalwatTimes/Pods-SalwatTimes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED4D4CE085D10C9E044A12D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SalwatTimes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86C1D02925D55FBF000A59C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C1D03525D55FBF000A59C7 /* ViewController.swift in Sources */,
+				861C22BF25D60E1D001D019C /* MainResponse.swift in Sources */,
+				861C22CF25D625FB001D019C /* UIView+Loader.swift in Sources */,
+				861C22A825D60403001D019C /* PrayersTimeView.swift in Sources */,
+				861C22BB25D60AF5001D019C /* APIRouter.swift in Sources */,
+				86C1D03525D55FBF000A59C7 /* PrayersTimesVC.swift in Sources */,
+				861C229125D5F77C001D019C /* UserDefaultsManager.swift in Sources */,
+				861C22C325D60E64001D019C /* Timings.swift in Sources */,
+				861C22AE25D606D9001D019C /* PrayersTimesVM.swift in Sources */,
+				861C22B725D60857001D019C /* APIManager.swift in Sources */,
+				86C1D04625D55FE9000A59C7 /* PrayerView.swift in Sources */,
+				861C22A225D60358001D019C /* DayCell.swift in Sources */,
 				86C1D03125D55FBF000A59C7 /* AppDelegate.swift in Sources */,
-				86C1D03325D55FBF000A59C7 /* SceneDelegate.swift in Sources */,
+				861C22B225D6080B001D019C /* UIViewController+Storyboard.swift in Sources */,
+				861C229525D5F7C8001D019C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +519,7 @@
 		};
 		86C1D04225D55FC0000A59C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A64E1D1A599D6B72AE3EC2 /* Pods-SalwatTimes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +539,7 @@
 		};
 		86C1D04325D55FC0000A59C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 388EF3E8E8EA475B8736DB32 /* Pods-SalwatTimes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
