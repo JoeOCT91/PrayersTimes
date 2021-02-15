@@ -20,6 +20,7 @@
 		861C22C325D60E64001D019C /* Timings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22C225D60E64001D019C /* Timings.swift */; };
 		861C22C925D6164E001D019C /* prayersTimes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861C22C825D6164E001D019C /* prayersTimes.storyboard */; };
 		861C22CF25D625FB001D019C /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C22CE25D625FB001D019C /* UIView+Loader.swift */; };
+		8625EE4F25D9F12E00A13423 /* LoactionManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8625EE4E25D9F12E00A13423 /* LoactionManger.swift */; };
 		86C1D03125D55FBF000A59C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D03025D55FBF000A59C7 /* AppDelegate.swift */; };
 		86C1D03525D55FBF000A59C7 /* PrayersTimesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C1D03425D55FBF000A59C7 /* PrayersTimesVC.swift */; };
 		86C1D03825D55FBF000A59C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C1D03625D55FBF000A59C7 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		861C22C225D60E64001D019C /* Timings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timings.swift; sourceTree = "<group>"; };
 		861C22C825D6164E001D019C /* prayersTimes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prayersTimes.storyboard; sourceTree = "<group>"; };
 		861C22CE25D625FB001D019C /* UIView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
+		8625EE4E25D9F12E00A13423 /* LoactionManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoactionManger.swift; sourceTree = "<group>"; };
 		86C1D02D25D55FBF000A59C7 /* SalwatTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SalwatTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C1D03025D55FBF000A59C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86C1D03425D55FBF000A59C7 /* PrayersTimesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersTimesVC.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				861C229025D5F77C001D019C /* UserDefaultsManager.swift */,
+				8625EE4E25D9F12E00A13423 /* LoactionManger.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				86C1D04625D55FE9000A59C7 /* PrayerView.swift in Sources */,
 				861C22A225D60358001D019C /* DayCell.swift in Sources */,
 				86C1D03125D55FBF000A59C7 /* AppDelegate.swift in Sources */,
+				8625EE4F25D9F12E00A13423 /* LoactionManger.swift in Sources */,
 				861C22B225D6080B001D019C /* UIViewController+Storyboard.swift in Sources */,
 				861C229525D5F7C8001D019C /* Constants.swift in Sources */,
 			);

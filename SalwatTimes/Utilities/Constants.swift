@@ -43,3 +43,8 @@ struct ParameterKeys {
     static let year = "year"
     static let method = "method"
 }
+
+struct Coordinates {
+    static var longitude: String = UserDefaultsManager.shared().longitude ?? "39.826168"
+    static var latitude: String = UserDefaultsManager.shared().latitude ?? "21.422510"
+}

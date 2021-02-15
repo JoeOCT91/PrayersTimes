@@ -22,7 +22,7 @@ class PrayersTimesVC: UIViewController {
     @IBOutlet var prayersTimesView: PrayersTimesView!
     
     private var viewModel: PrayersTimeVMProtocol!
-    private let locationManager = CLLocationManager() // create Location Manager object
+    private let locationManager = LoactionManger.shared() // Use LocationManager (Singleton)
     
     
     override func viewDidLoad() {
@@ -41,6 +41,7 @@ class PrayersTimesVC: UIViewController {
         return prayersTimesVC
     }
     
+    // MARK:- User Intents
     @IBAction func nextMonthPressed(_ sender: Any) {
         viewModel.getNextMonth()
     }
@@ -48,7 +49,6 @@ class PrayersTimesVC: UIViewController {
     @IBAction func previousMonthPressed(_ sender: Any) {
         viewModel.getPreviousMonth()
     }
-    
 }
 
 extension PrayersTimesVC: PrayersTimesVCProtocol {
@@ -98,7 +98,6 @@ extension PrayersTimesVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? DayCell else { return }
-        cell.deSelectDay()
         cell.isSelected = viewModel.isSelectedDay(indexPath: indexPath)
         viewModel.getCellData(indexPath: indexPath) { (weekDay, monthDay) in
             cell.setupData(weekDay: weekDay, monthDay: monthDay)
@@ -117,8 +116,11 @@ extension PrayersTimesVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.deSelectDay()
     }
 }
+
 extension PrayersTimesVC: CLLocationManagerDelegate{
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         viewModel.getUserCurrentLocation()
+        viewModel.getCurentMonthPrayersTimes()
+        print("here")
     }
 }

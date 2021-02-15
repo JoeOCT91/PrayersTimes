@@ -45,8 +45,8 @@ enum APIRouter:URLRequestConvertible {
         switch self {
         case .getTimes(let month, let year):
             return [
-                ParameterKeys.longitude: UserDefaultsManager.shared().longitude ?? "",
-                ParameterKeys.latitude: UserDefaultsManager.shared().latitude ?? "",
+                ParameterKeys.longitude: Coordinates.longitude,
+                ParameterKeys.latitude: Coordinates.latitude,
                 ParameterKeys.year: year,
                 ParameterKeys.month: month,
                 ParameterKeys.method: 5

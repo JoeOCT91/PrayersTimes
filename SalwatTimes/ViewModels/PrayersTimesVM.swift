@@ -8,7 +8,6 @@
 import Foundation
 import CoreLocation
 
-
 protocol PrayersTimeVMProtocol: class {
     func getCurentMonthPrayersTimes()
     func getCellData(indexPath: IndexPath, data: (_ weekDay: String, _ monthDay: String) -> ())
@@ -26,13 +25,12 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
     
     private weak var view: PrayersTimesVCProtocol?
     private let dateFormatter = DateFormatter()
-    private let locationManager = CLLocationManager() // create Location Manager object
+    private let locationManager = LoactionManger.shared() // Location Manager object
     
     private var monthPrayersData = [PrayersData]()
     private var year =  Int()
     private var month =  Int()
     private var day =  Int()
-    private var selectedIndex = Int()
     private var selectedDayIndexPath = IndexPath()
     
     
@@ -46,16 +44,13 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
         self.year = calendar.component(.year, from: curentDate)
         self.month = calendar.component(.month, from: curentDate)
         self.day = calendar.component(.day, from: curentDate)
-        self.selectedIndex = day + 1
+//        self.selectedIndex = day + 1
         dateFormatter.dateFormat = "MMMM, yyy"
         let date = dateFormatter.string(from: curentDate)
         self.view?.updateDateLabel(date: date)
     }
     
     internal func getUserCurrentLocation() {
-        
-        locationManager.requestAlwaysAuthorization() // Get location permisions
-        locationManager.requestWhenInUseAuthorization() // Get location permisions
         //cheack if locations permisions are set and okay
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -65,10 +60,8 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
             if let currentLocation = currentLocation {
                 UserDefaultsManager.shared().longitude = String(currentLocation.coordinate.longitude)
                 UserDefaultsManager.shared().latitude = String(currentLocation.coordinate.latitude)
-                getCurentMonthPrayersTimes()
             }
         }
-        
     }
     
     internal func getCurentMonthPrayersTimes() {
@@ -79,9 +72,9 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
             case .success(let prayersTimesData):
                 self.monthPrayersData = prayersTimesData.monthData
                 self.view?.reloadColleCtionview()
-                self.view?.setTimesData()
                 self.dayToSelect()
-                self.updateDateLabel() //
+                self.view?.setTimesData()
+                self.updateDateLabel() 
                 self.view?.hideLoader()
             case .failure(let error):
                 self.view?.hideLoader()
@@ -90,14 +83,13 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
         }
     }
 
-    
     //Return numbers of Days in the curent month
     //based on count of days that back from the api call
     //
     internal func getDaysCount() -> Int {
         return monthPrayersData.count
     }
-    
+    // collection view cell data for monthDay number
     internal func getCellData(indexPath: IndexPath, data: (_ weekDay: String, _ monthDay: String) -> ()) {
         let timestamp = Double(monthPrayersData[indexPath.row].date.timestamp)!
         let date = Date(timeIntervalSince1970: Double(timestamp))
@@ -110,14 +102,23 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
         let monthDay = dateFormatter.string(from: date)
         data(weekday, monthDay)
     }
-    
+    //Prayers timnings peer day
     internal func getDayPrayersTiming() -> [String] {
-        let dayTimings = monthPrayersData[selectedIndex].timings
+        let dayTimings = monthPrayersData[selectedDayIndexPath.row].timings
         let mirroredObject = Mirror(reflecting: dayTimings)
         var timingsArr = [String]()
+        // Convert struct proprities values into array
         for (_ , attr) in mirroredObject.children.enumerated() {
-            if let property_name = attr.value as? String {
-                timingsArr.append(property_name)
+            if let propertyValue = attr.value as? String {
+                if let index = propertyValue.range(of: " ")?.lowerBound {
+                    let subString = propertyValue.prefix(through: index)
+                    let string = String(subString)
+                    dateFormatter.dateFormat =  "HH:mm"
+                    let date = dateFormatter.date(from: string)
+                    dateFormatter.dateFormat = "h:mm a"
+                    let date12 = dateFormatter.string(from: date!)
+                    timingsArr.append(date12)
+                }
             }
         }
         return timingsArr
@@ -125,7 +126,6 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
     
     internal func didSelectDate(indexPath: IndexPath) {
         self.selectedDayIndexPath = indexPath
-        self.selectedIndex = indexPath.row
         self.view?.setTimesData()
     }
     
@@ -134,6 +134,7 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
         return selected
     }
     
+    //MARK:- Control User intents
     // This method called after next button pressed
     // And it call api to get prayers timings for next month after modify needed data
     internal func getNextMonth(){
@@ -162,6 +163,7 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
 }
 
 extension PrayersTimesVM {
+    
     private func updateDateLabel() {
         let timestamp = Double(monthPrayersData[selectedDayIndexPath.row].date.timestamp)!
         let date = Date(timeIntervalSince1970: Double(timestamp))
@@ -169,6 +171,7 @@ extension PrayersTimesVM {
         let dateAsString = dateFormatter.string(from: date)
         self.view?.updateDateLabel(date: dateAsString)
     }
+    
     private func dayToSelect() {
         //This function to select and view frist day of the month when user navigate between monthes
         let curentDate =  Date()
@@ -180,6 +183,7 @@ extension PrayersTimesVM {
         if month == monthPrayersData[0].date.gregorian.month.number &&
             year == Int(monthPrayersData[0].date.gregorian.year) {
             view?.selectCell(index: day-1)
+            
         } else {
             view?.selectCell(index: 0)
         }
