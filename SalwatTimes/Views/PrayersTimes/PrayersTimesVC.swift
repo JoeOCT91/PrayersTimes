@@ -27,6 +27,10 @@ class PrayersTimesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
+    }
+    // MARK:- Private Methods
+    private func setup(){
         viewModel.getCurrentDate()
         prayersTimesView.configureViews()
         prayersTimesView.setup(delgate: self, dataSource: self)
@@ -67,7 +71,7 @@ extension PrayersTimesVC: PrayersTimesVCProtocol {
     
     internal func selectCell(index: Int){
         let indexPath = IndexPath(row: index, section: 0)
-        prayersTimesView.monthDaysCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+        prayersTimesView.monthDaysCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         viewModel.didSelectDate(indexPath: indexPath) // to update selected day prayers timings
     }
     
@@ -93,15 +97,16 @@ extension PrayersTimesVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: Cells.day, for: indexPath) as! DayCell
+        viewModel.getCellData(indexPath: indexPath) { (weekDay, monthDay) in
+            cell.setupData(weekDay: weekDay, monthDay: monthDay)
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? DayCell else { return }
-        cell.isSelected = viewModel.isSelectedDay(indexPath: indexPath)
-        viewModel.getCellData(indexPath: indexPath) { (weekDay, monthDay) in
-            cell.setupData(weekDay: weekDay, monthDay: monthDay)
-        }
+        cell.isSelectedDay(isSelected: viewModel.isSelectedDay(indexPath: indexPath))
+ 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -121,6 +126,5 @@ extension PrayersTimesVC: CLLocationManagerDelegate{
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         viewModel.getUserCurrentLocation()
         viewModel.getCurentMonthPrayersTimes()
-        print("here")
     }
 }

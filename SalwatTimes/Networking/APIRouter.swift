@@ -19,8 +19,6 @@ enum APIRouter:URLRequestConvertible {
         switch self {
         case .getTimes:
             return .get
-        default:
-            return .post
         }
     }
     

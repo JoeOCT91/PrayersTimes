@@ -42,7 +42,7 @@ class PrayerView: UIView {
         prayerNameLabel.text = prayersNames[PrayerView.prayerIndex]
         PrayerView.prayerIndex += 1
         NSLayoutConstraint.activate([
-            prayerNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            prayerNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             prayerNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
 	        ])
     }
@@ -51,7 +51,7 @@ class PrayerView: UIView {
         self.addSubview(prayerTimeLabel)
         prayerTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            prayerTimeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            prayerTimeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             prayerTimeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15),
         ])
     }
