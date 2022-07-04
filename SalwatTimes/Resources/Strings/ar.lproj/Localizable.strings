@@ -1,0 +1,58 @@
+"arabic" = "";
+"splashTitle" = "مواقيت الصلاة";
+"loginWelcomeTitle" = "";
+
+
+"loginWelcomeTitle" = "مرحباً بك في مواقيت الصلاة";
+"firstName" = "الأسم";
+"lastName" = "اسم العائلة";
+"emailAddressPlaceHolder" = "البريد الإلكتروني";
+"passwordPlaceHolder" = "كلمة المرور";
+"rePasswordPlaceHolder" = "كلمة المرور مرة أخري";
+"mobileNumberPlaceHolder" = "رقم التليفون المحمول";
+"countryPlaceHolder" = "الدولة";
+"cityPlaceHolder" = "المدينة";
+
+"loginButtonTitle" = "تسجيل الدخول";
+"registerButtonTitle" = "تسجيل جديد";
+
+"usernameIconName" = "person";
+"passwordIconName" = "lock";
+"emailIconName"= "envelope";
+"globeIconName" = "globe";
+"cityIconName" = "building";
+"mobileIconName" = "iphone";
+
+
+// account
+"accountSettings" = "إعدادات الحساب";
+"welcome" = "مرحبا بك";
+"personalInformations" = "البيانات الشخصية";
+"changePassword" =  "تغير كلمة المرور";
+"previousOrders" = "الطلبات السابقة";
+"logout" = "تسجيل الخروج";
+
+// personal information
+"saveButton" = "حفظ";
+"fullnameHead" = "الإسم بالكامل";
+"emailHead" = "البريد الإلكتروني";
+"newPasswordHead" = "كلمة المرور الجديدة";
+
+"qiblaDirectionDescription" = "لتحديد اتجاة القبلة اجعل السهم يتجه الي أعلي منتصف الشاشة";
+
+
+// tabs titles
+"prayersTimes" = "مواقيت الصلاة";
+"prayersAlarms" = "التنبيهات";
+"qibla" = "القبلة";
+"holyQuran" = "القرآن الكريم";
+"settings" = "الإعدادات";
+
+
+// prayers name
+"fajr" = "صلاة الفجر";
+"sunrise" = "شروق الشمس";
+"dhuhr" = "صلاة الطهر";
+"asr" = "صلاة العصر";
+"maghrib" = "صلاة المغرب";
+"isha" = "صلاة العشاء";

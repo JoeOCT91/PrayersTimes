@@ -7,8 +7,9 @@
 
 import Foundation
 import CoreLocation
+import UserNotifications
 
-protocol PrayersTimeVMProtocol: class {
+protocol PrayersTimeVMProtocol: AnyObject {
     func getCurentMonthPrayersTimes()
     func getCellData(indexPath: IndexPath, data: (_ weekDay: String, _ monthDay: String) -> ())
     func getDayPrayersTiming() -> [String]
@@ -36,6 +37,8 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
     
     init(view: PrayersTimesVCProtocol) {
         self.view = view
+        UNMutableNotificationContent()
+        
     }
     
     internal func getCurrentDate() {
@@ -107,7 +110,7 @@ class PrayersTimesVM: PrayersTimeVMProtocol {
         let dayTimings = monthPrayersData[selectedDayIndexPath.row].timings
         let mirroredObject = Mirror(reflecting: dayTimings)
         var timingsArr = [String]()
-        // Convert struct proprities values into array
+        // Convert struct proprieties values into array
         for (_ , attr) in mirroredObject.children.enumerated() {
             if let propertyValue = attr.value as? String {
                 if let index = propertyValue.range(of: " ")?.lowerBound {

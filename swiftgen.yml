@@ -1,0 +1,24 @@
+xcassets:
+  inputs: SalwatTimes/Resources/Assets/Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: SalwatTimes/Resources/Assets/AssetsManager.swift
+
+strings:
+  inputs: SalwatTimes/Resources/Strings/ar.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift5
+    output: SalwatTimes/Resources/Strings/Strings.swift
+
+fonts:
+  inputs:
+    - SalwatTimes/Resources/Fonts/Bahij
+  outputs:
+    templateName: swift5
+    output: SalwatTimes/Resources/Fonts/FontsManager.swift
+
+colors:
+  inputs: SalwatTimes/Resources/Colors/Colors.txt
+  outputs:
+    templateName: swift5
+    output: SalwatTimes/Resources/Colors/ColorsManager.swift

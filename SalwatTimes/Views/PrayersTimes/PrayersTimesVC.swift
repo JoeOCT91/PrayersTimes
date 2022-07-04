@@ -32,8 +32,8 @@ class PrayersTimesVC: UIViewController {
     // MARK:- Private Methods
     private func setup(){
         viewModel.getCurrentDate()
-        prayersTimesView.configureViews()
-        prayersTimesView.setup(delgate: self, dataSource: self)
+        //prayersTimesView.configureViews()
+        //prayersTimesView.setup(delgate: self, dataSource: self)
         locationManager.delegate = self
     }
     
@@ -66,27 +66,27 @@ extension PrayersTimesVC: PrayersTimesVCProtocol {
     }
     
     internal func reloadColleCtionview() {
-        prayersTimesView.monthDaysCollectionView.reloadData()
+        //prayersTimesView.monthDaysCollectionView.reloadData()
     }
     
     internal func selectCell(index: Int){
-        let indexPath = IndexPath(row: index, section: 0)
-        prayersTimesView.monthDaysCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
-        viewModel.didSelectDate(indexPath: indexPath) // to update selected day prayers timings
+       // let indexPath = IndexPath(row: index, section: 0)
+      // prayersTimesView.monthDaysCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+       // viewModel.didSelectDate(indexPath: indexPath) // to update selected day prayers timings
     }
     
     internal func updateDateLabel(date: String){
-        prayersTimesView.dateLabel.text = date 
+       // prayersTimesView.dateLabel.text = date
     }
     
     internal func setTimesData(){
-        prayersTimesView.dayPrayersTimes.isHidden = false
-        let stackViews = prayersTimesView.dayPrayersTimes.arrangedSubviews
-        let prayersTimings = viewModel.getDayPrayersTiming()
-        for index in 0 ..< stackViews.count {
-            (stackViews[index] as! PrayerView).setupTimes(prayerTime: prayersTimings[index])
-        }
-    }
+//        prayersTimesView.dayPrayersTimes.isHidden = false
+//        let stackViews = prayersTimesView.dayPrayersTimes.arrangedSubviews
+//        let prayersTimings = viewModel.getDayPrayersTiming()
+//        for index in 0 ..< stackViews.count {
+//            (stackViews[index] as! PrayerView).setupTimes(prayerTime: prayersTimings[index])
+//        }
+   }
 }
 
 extension PrayersTimesVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -128,3 +128,4 @@ extension PrayersTimesVC: CLLocationManagerDelegate{
         viewModel.getCurentMonthPrayersTimes()
     }
 }
+

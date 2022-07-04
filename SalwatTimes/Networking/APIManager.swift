@@ -7,8 +7,10 @@
 
 import Foundation
 import Alamofire
+import Combine
 
 class APIManager {
+
     class func getTimes(month: Int, year: Int, complation: @escaping (Result<MainResponse, Error>) -> () ) {
         request(APIRouter.getTimes(month: month, year: year)) { (response) in
             complation(response)

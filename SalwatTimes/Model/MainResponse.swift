@@ -25,6 +25,7 @@ struct PrayersData: Codable {
     let date: DateClass
 }
 
+
 // MARK: - DateClass
 struct DateClass: Codable {
     let readable: String
@@ -32,7 +33,7 @@ struct DateClass: Codable {
     let gregorian: Gregorian
 }
 
-// MARK: - Gregorian Calandar
+// MARK: - Gregorian Calendar
 struct Gregorian: Codable {
     let date: String
     let format: String
@@ -96,5 +97,3 @@ enum Dhuhr: String, Codable {
     case the1208Eet = "12:08 (EET)"
     case the1209Eet = "12:09 (EET)"
 }
-
-

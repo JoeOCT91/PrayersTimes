@@ -22,6 +22,7 @@ struct Cells {
 }
 
 struct UserDefaultsKeys {
+    static let userUID = "UDKUserUID"
     static let longitude = "LONGITUDE"
     static let latitude = "LATITUDE"
 }

@@ -7,17 +7,21 @@
 
 import Foundation
 
-// MARK: - Timings
 struct Timings: Codable {
     let fajr: String
+    let sunrise: String
     let dhuhr: String
-    let asr, maghrib, isha: String
+    let asr: String
+    let maghrib: String
+    let isha: String
 
     enum CodingKeys: String, CodingKey {
         case fajr = "Fajr"
+        case sunrise = "Sunrise"
         case dhuhr = "Dhuhr"
         case asr = "Asr"
         case maghrib = "Maghrib"
         case isha = "Isha"
     }
 }
+

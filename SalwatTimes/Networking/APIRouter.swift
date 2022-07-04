@@ -47,7 +47,7 @@ enum APIRouter:URLRequestConvertible {
                 ParameterKeys.latitude: Coordinates.latitude,
                 ParameterKeys.year: year,
                 ParameterKeys.month: month,
-                ParameterKeys.method: 5
+                ParameterKeys.method: 5,
             ]
 
         }

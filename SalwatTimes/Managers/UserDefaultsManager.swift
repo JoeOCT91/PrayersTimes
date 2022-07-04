@@ -16,6 +16,17 @@ class UserDefaultsManager {
         return UserDefaultsManager.sharedInstance
     }
     
+    // MARK:- Properties
+    var userUId: String? {
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKeys.userUID)
+        }
+        get {
+            guard let token = UserDefaults.standard.string(forKey: UserDefaultsKeys.userUID) else { return nil }
+            return token
+        }
+    }
+    
     
     // MARK:- Properties
     var longitude: String? {
